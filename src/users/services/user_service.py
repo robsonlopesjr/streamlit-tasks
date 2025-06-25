@@ -23,6 +23,14 @@ def listar_usuarios():
         db.close()
 
 
+def listar_usuario_por_email(email: str):
+    db = SessionLocal()
+    try:
+        return user_repository.get_by_email(db, email)
+    finally:
+        db.close()
+
+
 def atualizar_usuario(user_id: str, dados: UserCreate):
     db = SessionLocal()
     try:

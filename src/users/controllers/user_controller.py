@@ -18,3 +18,7 @@ def excluir_usuario(user_id):
 
 def listar_usuarios():
     return user_service.listar_usuarios()
+
+
+def listar_usuario_por_email(email):
+    return user_service.listar_usuario_por_email(email)
